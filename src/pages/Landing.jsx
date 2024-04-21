@@ -1,10 +1,10 @@
 import React from "react";
-import heroImg from "/public/hero.svg";
-import underline from "/public/underline.svg";
+import heroImg from "/hero.svg";
+import underline from "/underline.svg";
 
 const Landing = () => {
   return (
-    <div className="px-36 h-full">
+    <div className="max-w-screen-xl h-ful mx-auto">
       <main className="grid grid-cols-[1.3fr_1fr] h-full">
         <div className="">
           <h1 className="text-5xl text-heading pt-44 font-bold leading-tight mb-10">

@@ -7,6 +7,7 @@ export default {
         primary: "#FFD803",
         heading: "#272343",
         body: "#2D334A",
+        "bg-primary": "#FFEC82",
       },
     },
   },
