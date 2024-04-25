@@ -1,6 +1,8 @@
 import React from "react";
 import heroImg from "/hero.svg";
 import underline from "/underline.svg";
+import { Link } from "react-router-dom";
+import Signup from "./Login";
 
 const Landing = () => {
   return (
@@ -23,12 +25,12 @@ const Landing = () => {
           </p>
 
           <div className="flex gap-5 text-xl items-center font-semibold">
-            <a
+            <div
               className="bg-primary px-8 border-2 border-primary py-1 rounded-md hover:bg-white duration-150"
               href="#"
             >
-              Sign up
-            </a>
+              <Link to="/signup">Sign up</Link>
+            </div>
             <a
               className="rounded-md px-4 border-2 py-1 border-primary hover:bg-primary duration-150"
               href="#"

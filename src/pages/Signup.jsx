@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import SignupImage from "/signup.svg";
 import Underline from "/underline.svg";
+import { Link } from "react-router-dom";
+import Login from "./Login";
 
 const Signup = () => {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -68,7 +70,7 @@ const Signup = () => {
             </div>
 
             <button
-              className="rounded-md bg-primary hover:bg-[#FFEC82] transition-all duration-100 text-xl text-heading font-semibold py-2 mt-12"
+              className="rounded-md bg-primary hover:bg-[#FFEC82] transition-all duration-100 text-xl text-heading font-semibold py-2 mt-12 w-[70%] self-center"
               type="submit"
             >
               Sign up
@@ -76,12 +78,15 @@ const Signup = () => {
           </form>
           <p className="mt-12 font-medium text-lg text-gray-500">
             Not a new user?{" "}
-            <a href="#" className="relative overflow-visible hover:text-black">
-              Login{" "}
+            <div
+              href="#"
+              className="relative overflow-visible hover:text-black inline-block"
+            >
+              <Link to="/login">Login </Link>
               <div className="absolute -bottom-1 -left-2 w-16">
                 <img className=" w-full" src={Underline} alt="underline" />
               </div>
-            </a>
+            </div>
           </p>
         </div>
       </div>
