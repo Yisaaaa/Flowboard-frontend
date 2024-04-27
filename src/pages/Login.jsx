@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import SignupImage from "/signup.svg";
 import Underline from "/underline.svg";
 import { Link } from "react-router-dom";
-import Login from "./Login";
+import LoginImage from "/login.svg";
 
-const Signup = () => {
+const Login = () => {
   const [passwordShown, setPasswordShown] = useState(false);
 
   const togglePassword = () => {
@@ -16,18 +16,11 @@ const Signup = () => {
   };
 
   return (
-    <div className="grid grid-cols-[1fr_40%] items-center justify-center h-full ">
-      <div className="flex justify-center">
-        <img
-          className="w-[60%]"
-          src={SignupImage}
-          alt="illustration of a girl seating in a window beside a tree"
-        />
-      </div>
+    <div className="grid grid-cols-[40%_1fr] items-center justify-center h-full ">
       <div className="flex items-center justify-center bg-bg-primary h-full">
         <div className="bg-white w-[70%] h-[75%] rounded-lg flex flex-col items-center">
           <p className="text-3xl font-semibold text-center mt-16 mb-12">
-            Create an account
+            Welcome Back! ^_^
           </p>
           <form className="flex flex-col gap-7 w-[70%]" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-2">
@@ -77,21 +70,25 @@ const Signup = () => {
             </button>
           </form>
           <p className="mt-12 font-medium text-base text-gray-500">
-            Not a new user?{" "}
-            <div
-              href="#"
-              className="relative ml-2 overflow-visible hover:text-black inline-block transition-all duration-150"
-            >
-              <Link to="/login">Login </Link>
-              <div className="absolute -bottom-1 -left-2 w-16">
+            Not a new user?
+            <div className="ml-2 relative overflow-visible inline-block hover:text-black transition-all duration-150 ">
+              <Link to="/signup">Sign up</Link>
+              <div className="absolute -bottom-1 -left-2 w-20">
                 <img className=" w-full" src={Underline} alt="underline" />
               </div>
             </div>
           </p>
         </div>
       </div>
+      <div className="flex justify-center ">
+        <img
+          className="w-[60%]"
+          src={LoginImage}
+          alt="illustration of man in front of his computer waving back"
+        />
+      </div>
     </div>
   );
 };
 
-export default Signup;
+export default Login;
